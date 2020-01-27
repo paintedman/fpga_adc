@@ -73,77 +73,77 @@ VCCIO8                       : A1        : power  :                   : 3.3V    
 b_addr[4]                    : A2        : input  : 3.3-V LVTTL       :         : 8         : Y              
 b_rd                         : A3        : input  : 3.3-V LVTTL       :         : 8         : Y              
 b_wr                         : A4        : input  : 3.3-V LVTTL       :         : 8         : Y              
-RD_data[7]                   : A5        : output : 3.3-V LVTTL       :         : 8         : N              
+RD_data[15]                  : A5        : output : 3.3-V LVTTL       :         : 8         : N              
 b_addr[0]                    : A6        : input  : 3.3-V LVTTL       :         : 8         : Y              
 b_data[15]                   : A7        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
 b_data[12]                   : A8        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
 b_data[11]                   : A9        : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-data_valid                   : A10       : output : 3.3-V LVTTL       :         : 7         : N              
+fiffo_out[10]                : A10       : output : 3.3-V LVTTL       :         : 7         : N              
 b_data[6]                    : A11       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 b_data[5]                    : A12       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 b_data[4]                    : A13       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 b_data[3]                    : A14       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 b_data[1]                    : A15       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 VCCIO7                       : A16       : power  :                   : 3.3V    : 7         :                
-state[3]                     : B1        : output : 3.3-V LVTTL       :         : 1         : N              
+reset_o                      : B1        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : B2        : gnd    :                   :         :           :                
-state[0]                     : B3        : output : 3.3-V LVTTL       :         : 8         : N              
-state[2]                     : B4        : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
+RD_data[11]                  : B4        : output : 3.3-V LVTTL       :         : 8         : N              
 b_addr[1]                    : B5        : input  : 3.3-V LVTTL       :         : 8         : Y              
-RD_data[5]                   : B6        : output : 3.3-V LVTTL       :         : 8         : N              
-RD_data[6]                   : B7        : output : 3.3-V LVTTL       :         : 8         : N              
-hrd_req                      : B8        : output : 3.3-V LVTTL       :         : 8         : N              
-RD_data[2]                   : B9        : output : 3.3-V LVTTL       :         : 7         : N              
+idata[1]                     : B6        : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
+fiffo_out[6]                 : B8        : output : 3.3-V LVTTL       :         : 8         : N              
+fiffo_out[1]                 : B9        : output : 3.3-V LVTTL       :         : 7         : N              
 b_data[8]                    : B10       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-fiffo_out[5]                 : B11       : output : 3.3-V LVTTL       :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 7         :                
-fiffo_out[13]                : B13       : output : 3.3-V LVTTL       :         : 7         : N              
-rd_req                       : B14       : output : 3.3-V LVTTL       :         : 7         : N              
+fiffo_out[12]                : B11       : output : 3.3-V LVTTL       :         : 7         : N              
+fiffo_out[3]                 : B12       : output : 3.3-V LVTTL       :         : 7         : N              
+fiffo_out[0]                 : B13       : output : 3.3-V LVTTL       :         : 7         : N              
+fiffo_out[11]                : B14       : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : B15       : gnd    :                   :         :           :                
-fiffo_out[9]                 : B16       : output : 3.3-V LVTTL       :         : 6         : N              
+fiffo_out[4]                 : B16       : output : 3.3-V LVTTL       :         : 6         : N              
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 3.3-V LVTTL       :         : 1         : N              
-RD_data[15]                  : C2        : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1         :                
 b_csel                       : C3        : input  : 3.3-V LVTTL       :         : 8         : Y              
 VCCIO8                       : C4        : power  :                   : 3.3V    : 8         :                
 GND                          : C5        : gnd    :                   :         :           :                
-RD_data[1]                   : C6        : output : 3.3-V LVTTL       :         : 8         : N              
+cs_read                      : C6        : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : C7        : power  :                   : 3.3V    : 8         :                
 b_data[14]                   : C8        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
 b_data[13]                   : C9        : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 VCCIO7                       : C10       : power  :                   : 3.3V    : 7         :                
-fiffo_out[14]                : C11       : output : 3.3-V LVTTL       :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
 GND                          : C12       : gnd    :                   :         :           :                
 VCCIO7                       : C13       : power  :                   : 3.3V    : 7         :                
 b_data[2]                    : C14       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 b_data[0]                    : C15       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-cs_read                      : C16       : output : 3.3-V LVTTL       :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 6         :                
 cyc_o                        : D1        : output : 3.3-V LVTTL       :         : 1         : N              
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D2        : input  : 3.3-V LVTTL       :         : 1         : N              
-state[1]                     : D3        : output : 3.3-V LVTTL       :         : 8         : N              
+RD_data[4]                   : D3        : output : 3.3-V LVTTL       :         : 8         : N              
 b_addr[3]                    : D4        : input  : 3.3-V LVTTL       :         : 1         : Y              
 GND                          : D5        : gnd    :                   :         :           :                
 b_addr[2]                    : D6        : input  : 3.3-V LVTTL       :         : 8         : Y              
 GND                          : D7        : gnd    :                   :         :           :                
-RD_data[8]                   : D8        : output : 3.3-V LVTTL       :         : 8         : N              
-RD_data[4]                   : D9        : output : 3.3-V LVTTL       :         : 7         : N              
+re_we                        : D8        : output : 3.3-V LVTTL       :         : 8         : N              
+fiffo_out[5]                 : D9        : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : D10       : gnd    :                   :         :           :                
 b_data[7]                    : D11       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-clk_o                        : D12       : output : 3.3-V LVTTL       :         : 7         : N              
+rd_empty                     : D12       : output : 3.3-V LVTTL       :         : 7         : N              
 VCCD_PLL2                    : D13       : power  :                   : 1.2V    :           :                
-sd_dqm[0]                    : D14       : output : 3.3-V LVTTL       :         : 7         : N              
-fiffo_out[11]                : D15       : output : 3.3-V LVTTL       :         : 6         : N              
-adc_clk                      : D16       : output : 3.3-V LVTTL       :         : 6         : Y              
+fiffo_out[14]                : D14       : output : 3.3-V LVTTL       :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 6         :                
+clk_main                     : D16       : output : 3.3-V LVTTL       :         : 6         : Y              
 clk                          : E1        : input  : 3.3-V LVTTL       :         : 1         : Y              
 GND+                         : E2        :        :                   :         : 1         :                
 VCCIO1                       : E3        : power  :                   : 3.3V    : 1         :                
 GND                          : E4        : gnd    :                   :         :           :                
-RD_data[11]                  : E5        : output : 3.3-V LVTTL       :         : 1         : N              
-RD_data[12]                  : E6        : output : 3.3-V LVTTL       :         : 8         : N              
-RD_data[10]                  : E7        : output : 3.3-V LVTTL       :         : 8         : N              
-RD_data[9]                   : E8        : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E5        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
+RD_data[6]                   : E7        : output : 3.3-V LVTTL       :         : 8         : N              
+sd_dqm[1]                    : E8        : output : 3.3-V LVTTL       :         : 8         : N              
 b_data[10]                   : E9        : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 b_data[9]                    : E10       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-fiffo_out[1]                 : E11       : output : 3.3-V LVTTL       :         : 7         : N              
+cs_row                       : E11       : output : 3.3-V LVTTL       :         : 7         : N              
 GNDA2                        : E12       : gnd    :                   :         :           :                
 GND                          : E13       : gnd    :                   :         :           :                
 VCCIO6                       : E14       : power  :                   : 3.3V    : 6         :                
@@ -151,21 +151,21 @@ GND+                         : E15       :        :                   :         
 GND+                         : E16       :        :                   :         : 6         :                
 GND                          : F1        : gnd    :                   :         :           :                
 GND                          : F2        : gnd    :                   :         :           :                
-Key                          : F3        : input  : 3.3-V LVTTL       :         : 1         : Y              
+key_sw1                      : F3        : input  : 3.3-V LVTTL       :         : 1         : Y              
 nSTATUS                      : F4        :        :                   :         : 1         :                
 b_fdskr                      : F5        : input  : 3.3-V LVTTL       :         : 1         : Y              
-RD_data[14]                  : F6        : output : 3.3-V LVTTL       :         : 8         : N              
-RD_data[0]                   : F7        : output : 3.3-V LVTTL       :         : 8         : N              
-RD_data[13]                  : F8        : output : 3.3-V LVTTL       :         : 8         : N              
-stall                        : F9        : output : 3.3-V LVTTL       :         : 7         : N              
-ad_data[0]                   : F10       : input  : 3.3-V LVTTL       :         : 7         : Y              
-rd_empty                     : F11       : output : 3.3-V LVTTL       :         : 7         : N              
+stall                        : F6        : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 8         :                
+idata[9]                     : F8        : output : 3.3-V LVTTL       :         : 8         : N              
+fiffo_out[9]                 : F9        : output : 3.3-V LVTTL       :         : 7         : N              
+adc_data[0]                  : F10       : input  : 3.3-V LVTTL       :         : 7         : Y              
+fiffo_out[15]                : F11       : output : 3.3-V LVTTL       :         : 7         : N              
 VCCA2                        : F12       : power  :                   : 2.5V    :           :                
-fiffo_out[2]                 : F13       : output : 3.3-V LVTTL       :         : 6         : N              
+fiffo_out[13]                : F13       : output : 3.3-V LVTTL       :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 6         :                
-fiffo_out[7]                 : F15       : output : 3.3-V LVTTL       :         : 6         : N              
+idata[14]                    : F15       : output : 3.3-V LVTTL       :         : 6         : N              
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : F16       : output : 3.3-V LVTTL       :         : 6         : N              
-RD_data[3]                   : G1        : output : 3.3-V LVTTL       :         : 1         : N              
+RD_data[1]                   : G1        : output : 3.3-V LVTTL       :         : 1         : N              
 b_fclk                       : G2        : input  : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : G3        : power  :                   : 3.3V    : 1         :                
 GND                          : G4        : gnd    :                   :         :           :                
@@ -175,16 +175,16 @@ VCCINT                       : G7        : power  :                   : 1.2V    
 VCCINT                       : G8        : power  :                   : 1.2V    :           :                
 VCCINT                       : G9        : power  :                   : 1.2V    :           :                
 VCCINT                       : G10       : power  :                   : 1.2V    :           :                
-ad_data[1]                   : G11       : input  : 3.3-V LVTTL       :         : 6         : Y              
+adc_data[1]                  : G11       : input  : 3.3-V LVTTL       :         : 6         : Y              
 MSEL2                        : G12       :        :                   :         : 6         :                
 GND                          : G13       : gnd    :                   :         :           :                
 VCCIO6                       : G14       : power  :                   : 3.3V    : 6         :                
-cs_row                       : G15       : output : 3.3-V LVTTL       :         : 6         : N              
-fiffo_out[10]                : G16       : output : 3.3-V LVTTL       :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 6         :                
+fiffo_out[2]                 : G16       : output : 3.3-V LVTTL       :         : 6         : N              
 ~ALTERA_DCLK~                : H1        : output : 3.3-V LVTTL       :         : 1         : N              
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 3.3-V LVTTL       :         : 1         : N              
-TCK                          : H3        : input  :                   :         : 1         :                
-TDI                          : H4        : input  :                   :         : 1         :                
+altera_reserved_tck          : H3        : input  : 3.3-V LVTTL       :         : 1         : N              
+altera_reserved_tdi          : H4        : input  : 3.3-V LVTTL       :         : 1         : N              
 nCONFIG                      : H5        :        :                   :         : 1         :                
 VCCINT                       : H6        : power  :                   : 1.2V    :           :                
 GND                          : H7        : gnd    :                   :         :           :                
@@ -200,19 +200,19 @@ GND                          : H16       : gnd    :                   :         
 sd_dq[14]                    : J1        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 sd_dq[15]                    : J2        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 nCE                          : J3        :        :                   :         : 1         :                
-TDO                          : J4        : output :                   :         : 1         :                
-TMS                          : J5        : input  :                   :         : 1         :                
-Res                          : J6        : input  : 3.3-V LVTTL       :         : 2         : Y              
+altera_reserved_tdo          : J4        : output : 3.3-V LVTTL       :         : 1         : N              
+altera_reserved_tms          : J5        : input  : 3.3-V LVTTL       :         : 1         : N              
+reset                        : J6        : input  : 3.3-V LVTTL       :         : 2         : Y              
 GND                          : J7        : gnd    :                   :         :           :                
 GND                          : J8        : gnd    :                   :         :           :                
 GND                          : J9        : gnd    :                   :         :           :                
 GND                          : J10       : gnd    :                   :         :           :                
-sd_dqm[1]                    : J11       : output : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J11       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J12       :        :                   :         : 5         :                
-reset                        : J13       : output : 3.3-V LVTTL       :         : 5         : N              
-ad_data[3]                   : J14       : input  : 3.3-V LVTTL       :         : 5         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :         : 5         :                
-fiffo_out[0]                 : J16       : output : 3.3-V LVTTL       :         : 5         : N              
+idata[6]                     : J13       : output : 3.3-V LVTTL       :         : 5         : N              
+adc_data[3]                  : J14       : input  : 3.3-V LVTTL       :         : 5         : Y              
+state[3]                     : J15       : output : 3.3-V LVTTL       :         : 5         : N              
+state[0]                     : J16       : output : 3.3-V LVTTL       :         : 5         : N              
 sd_dq[12]                    : K1        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 sd_dq[13]                    : K2        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 VCCIO2                       : K3        : power  :                   : 3.3V    : 2         :                
@@ -220,31 +220,31 @@ GND                          : K4        : gnd    :                   :         
 sd_dq[0]                     : K5        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 sd_dq[3]                     : K6        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 VCCINT                       : K7        : power  :                   : 1.2V    :           :                
-idata[13]                    : K8        : output : 3.3-V LVTTL       :         : 3         : N              
-idata[2]                     : K9        : output : 3.3-V LVTTL       :         : 4         : N              
-re_we                        : K10       : output : 3.3-V LVTTL       :         : 4         : N              
-ad_data[2]                   : K11       : input  : 3.3-V LVTTL       :         : 5         : Y              
-ad_data[4]                   : K12       : input  : 3.3-V LVTTL       :         : 5         : Y              
+RD_data[3]                   : K8        : output : 3.3-V LVTTL       :         : 3         : N              
+RD_data[14]                  : K9        : output : 3.3-V LVTTL       :         : 4         : N              
+sd_dqm[0]                    : K10       : output : 3.3-V LVTTL       :         : 4         : N              
+adc_data[2]                  : K11       : input  : 3.3-V LVTTL       :         : 5         : Y              
+adc_data[4]                  : K12       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND                          : K13       : gnd    :                   :         :           :                
 VCCIO5                       : K14       : power  :                   : 3.3V    : 5         :                
-fiffo_out[3]                 : K15       : output : 3.3-V LVTTL       :         : 5         : N              
-ad_data[5]                   : K16       : input  : 3.3-V LVTTL       :         : 5         : Y              
+state[1]                     : K15       : output : 3.3-V LVTTL       :         : 5         : N              
+adc_data[5]                  : K16       : input  : 3.3-V LVTTL       :         : 5         : Y              
 sd_dq[10]                    : L1        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 sd_dq[11]                    : L2        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 sd_dq[1]                     : L3        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 sd_dq[2]                     : L4        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 VCCA1                        : L5        : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L6        :        :                   :         : 2         :                
-idata[7]                     : L7        : output : 3.3-V LVTTL       :         : 3         : N              
+RD_data[13]                  : L6        : output : 3.3-V LVTTL       :         : 2         : N              
+data_valid                   : L7        : output : 3.3-V LVTTL       :         : 3         : N              
 sd_ba[1]                     : L8        : output : 3.3-V LVTTL       :         : 3         : Y              
-LED                          : L9        : output : 3.3-V LVTTL       :         : 4         : Y              
-wr_addr[8]                   : L10       : output : 3.3-V LVTTL       :         : 4         : N              
-wr_addr[9]                   : L11       : output : 3.3-V LVTTL       :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : L12       :        :                   :         : 5         :                
-ad_data[6]                   : L13       : input  : 3.3-V LVTTL       :         : 5         : Y              
-fiffo_out[6]                 : L14       : output : 3.3-V LVTTL       :         : 5         : N              
-clk_s                        : L15       : output : 3.3-V LVTTL       :         : 5         : N              
-ad_data[8]                   : L16       : input  : 3.3-V LVTTL       :         : 5         : Y              
+led                          : L9        : output : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L10       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L11       :        :                   :         : 4         :                
+RD_data[12]                  : L12       : output : 3.3-V LVTTL       :         : 5         : N              
+adc_data[6]                  : L13       : input  : 3.3-V LVTTL       :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L14       :        :                   :         : 5         :                
+fiffo_out[7]                 : L15       : output : 3.3-V LVTTL       :         : 5         : N              
+adc_data[8]                  : L16       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND+                         : M1        :        :                   :         : 2         :                
 GND+                         : M2        :        :                   :         : 2         :                
 VCCIO2                       : M3        : power  :                   : 3.3V    : 2         :                
@@ -253,9 +253,9 @@ GNDA1                        : M5        : gnd    :                   :         
 sd_dq[5]                     : M6        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
 sd_cas                       : M7        : output : 3.3-V LVTTL       :         : 3         : Y              
 sd_ras                       : M8        : output : 3.3-V LVTTL       :         : 3         : Y              
-idata[14]                    : M9        : output : 3.3-V LVTTL       :         : 4         : N              
-wr_addr[6]                   : M10       : output : 3.3-V LVTTL       :         : 4         : N              
-wr_addr[3]                   : M11       : output : 3.3-V LVTTL       :         : 4         : N              
+idata[11]                    : M9        : output : 3.3-V LVTTL       :         : 4         : N              
+idata[4]                     : M10       : output : 3.3-V LVTTL       :         : 4         : N              
+idata[15]                    : M11       : output : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : M12       :        :                   :         : 5         :                
 GND                          : M13       : gnd    :                   :         :           :                
 VCCIO5                       : M14       : power  :                   : 3.3V    : 5         :                
@@ -266,33 +266,33 @@ sd_dq[8]                     : N2        : bidir  : 3.3-V LVTTL       :         
 sd_dq[4]                     : N3        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
 VCCD_PLL1                    : N4        : power  :                   : 1.2V    :           :                
 sd_dq[7]                     : N5        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-idata[4]                     : N6        : output : 3.3-V LVTTL       :         : 3         : N              
+RD_data[2]                   : N6        : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : N7        : gnd    :                   :         :           :                
 sd_ba[0]                     : N8        : output : 3.3-V LVTTL       :         : 3         : Y              
-idata[15]                    : N9        : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N9        :        :                   :         : 4         :                
 GND                          : N10       : gnd    :                   :         :           :                
-wr_addr[12]                  : N11       : output : 3.3-V LVTTL       :         : 4         : N              
-wr_addr[11]                  : N12       : output : 3.3-V LVTTL       :         : 4         : N              
-fiffo_out[4]                 : N13       : output : 3.3-V LVTTL       :         : 5         : N              
-idata[0]                     : N14       : output : 3.3-V LVTTL       :         : 5         : N              
-fiffo_out[15]                : N15       : output : 3.3-V LVTTL       :         : 5         : N              
-ad_data[9]                   : N16       : input  : 3.3-V LVTTL       :         : 5         : Y              
-idata[12]                    : P1        : output : 3.3-V LVTTL       :         : 2         : N              
-sd_clk                       : P2        : output : 3.3-V LVTTL       :         : 2         : Y              
+idata[5]                     : N11       : output : 3.3-V LVTTL       :         : 4         : N              
+hrd_req                      : N12       : output : 3.3-V LVTTL       :         : 4         : N              
+idata[0]                     : N13       : output : 3.3-V LVTTL       :         : 5         : N              
+RD_data[7]                   : N14       : output : 3.3-V LVTTL       :         : 5         : N              
+idata[10]                    : N15       : output : 3.3-V LVTTL       :         : 5         : N              
+adc_data[9]                  : N16       : input  : 3.3-V LVTTL       :         : 5         : Y              
+RD_data[5]                   : P1        : output : 3.3-V LVTTL       :         : 2         : N              
+clk_sdram                    : P2        : output : 3.3-V LVTTL       :         : 2         : Y              
 sd_dq[6]                     : P3        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
 VCCIO3                       : P4        : power  :                   : 3.3V    : 3         :                
 GND                          : P5        : gnd    :                   :         :           :                
 sd_we                        : P6        : output : 3.3-V LVTTL       :         : 3         : Y              
 VCCIO3                       : P7        : power  :                   : 3.3V    : 3         :                
 sd_cs                        : P8        : output : 3.3-V LVTTL       :         : 3         : Y              
-wr_addr[4]                   : P9        : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P9        :        :                   :         : 4         :                
 VCCIO4                       : P10       : power  :                   : 3.3V    : 4         :                
-wr_addr[0]                   : P11       : output : 3.3-V LVTTL       :         : 4         : N              
+idata[2]                     : P11       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : P12       : gnd    :                   :         :           :                
 VCCIO4                       : P13       : power  :                   : 3.3V    : 4         :                
-wr_addr[1]                   : P14       : output : 3.3-V LVTTL       :         : 4         : N              
-ad_data[7]                   : P15       : input  : 3.3-V LVTTL       :         : 5         : Y              
-fiffo_out[8]                 : P16       : output : 3.3-V LVTTL       :         : 5         : N              
+idata[7]                     : P14       : output : 3.3-V LVTTL       :         : 4         : N              
+adc_data[7]                  : P15       : input  : 3.3-V LVTTL       :         : 5         : Y              
+state[2]                     : P16       : output : 3.3-V LVTTL       :         : 5         : N              
 sd_cke                       : R1        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND                          : R2        : gnd    :                   :         :           :                
 sd_addr[11]                  : R3        : output : 3.3-V LVTTL       :         : 3         : Y              
@@ -301,14 +301,14 @@ sd_addr[6]                   : R5        : output : 3.3-V LVTTL       :         
 sd_addr[4]                   : R6        : output : 3.3-V LVTTL       :         : 3         : Y              
 sd_addr[0]                   : R7        : output : 3.3-V LVTTL       :         : 3         : Y              
 sd_addr[2]                   : R8        : output : 3.3-V LVTTL       :         : 3         : Y              
-idata[10]                    : R9        : output : 3.3-V LVTTL       :         : 4         : N              
-idata[11]                    : R10       : output : 3.3-V LVTTL       :         : 4         : N              
-idata[9]                     : R11       : output : 3.3-V LVTTL       :         : 4         : N              
-idata[6]                     : R12       : output : 3.3-V LVTTL       :         : 4         : N              
-wr_addr[5]                   : R13       : output : 3.3-V LVTTL       :         : 4         : N              
-wr_addr[7]                   : R14       : output : 3.3-V LVTTL       :         : 4         : N              
+RD_data[0]                   : R9        : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :         : 4         :                
+idata[8]                     : R11       : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R12       :        :                   :         : 4         :                
+idata[3]                     : R13       : output : 3.3-V LVTTL       :         : 4         : N              
+rd_req                       : R14       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : R15       : gnd    :                   :         :           :                
-fiffo_out[12]                : R16       : output : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R16       :        :                   :         : 5         :                
 VCCIO3                       : T1        : power  :                   : 3.3V    : 3         :                
 sd_addr[12]                  : T2        : output : 3.3-V LVTTL       :         : 3         : Y              
 sd_addr[9]                   : T3        : output : 3.3-V LVTTL       :         : 3         : Y              
@@ -317,11 +317,11 @@ sd_addr[5]                   : T5        : output : 3.3-V LVTTL       :         
 sd_addr[10]                  : T6        : output : 3.3-V LVTTL       :         : 3         : Y              
 sd_addr[1]                   : T7        : output : 3.3-V LVTTL       :         : 3         : Y              
 sd_addr[3]                   : T8        : output : 3.3-V LVTTL       :         : 3         : Y              
-idata[1]                     : T9        : output : 3.3-V LVTTL       :         : 4         : N              
-idata[3]                     : T10       : output : 3.3-V LVTTL       :         : 4         : N              
-idata[5]                     : T11       : output : 3.3-V LVTTL       :         : 4         : N              
-idata[8]                     : T12       : output : 3.3-V LVTTL       :         : 4         : N              
-wr_addr[10]                  : T13       : output : 3.3-V LVTTL       :         : 4         : N              
-wr_addr[2]                   : T14       : output : 3.3-V LVTTL       :         : 4         : N              
-empty                        : T15       : output : 3.3-V LVTTL       :         : 4         : N              
+RD_data[8]                   : T9        : output : 3.3-V LVTTL       :         : 4         : N              
+RD_data[9]                   : T10       : output : 3.3-V LVTTL       :         : 4         : N              
+RD_data[10]                  : T11       : output : 3.3-V LVTTL       :         : 4         : N              
+fiffo_out[8]                 : T12       : output : 3.3-V LVTTL       :         : 4         : N              
+idata[12]                    : T13       : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T14       :        :                   :         : 4         :                
+idata[13]                    : T15       : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : T16       : power  :                   : 3.3V    : 4         :                
