@@ -1,0 +1,158 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 11:48:09  January 01, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		burst_sdram_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
+set_global_assignment -name FAMILY "Cyclone 10 LP"
+set_global_assignment -name DEVICE 10CL006YU256C8G
+set_global_assignment -name TOP_LEVEL_ENTITY burst
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:48:09  JANUARY 01, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 256
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_E1 -to clk
+set_location_assignment PIN_P2 -to sd_clk
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp2.stp
+set_location_assignment PIN_T2 -to sd_addr[12]
+set_location_assignment PIN_R3 -to sd_addr[11]
+set_location_assignment PIN_T6 -to sd_addr[10]
+set_location_assignment PIN_T3 -to sd_addr[9]
+set_location_assignment PIN_R4 -to sd_addr[8]
+set_location_assignment PIN_T4 -to sd_addr[7]
+set_location_assignment PIN_R5 -to sd_addr[6]
+set_location_assignment PIN_T5 -to sd_addr[5]
+set_location_assignment PIN_R6 -to sd_addr[4]
+set_location_assignment PIN_T8 -to sd_addr[3]
+set_location_assignment PIN_R8 -to sd_addr[2]
+set_location_assignment PIN_T7 -to sd_addr[1]
+set_location_assignment PIN_R7 -to sd_addr[0]
+set_location_assignment PIN_L8 -to sd_ba[1]
+set_location_assignment PIN_N8 -to sd_ba[0]
+set_location_assignment PIN_P8 -to sd_cs
+set_location_assignment PIN_R1 -to sd_cke
+set_location_assignment PIN_M7 -to sd_cas
+set_location_assignment PIN_J2 -to sd_dq[15]
+set_location_assignment PIN_J1 -to sd_dq[14]
+set_location_assignment PIN_K2 -to sd_dq[13]
+set_location_assignment PIN_K1 -to sd_dq[12]
+set_location_assignment PIN_L2 -to sd_dq[11]
+set_location_assignment PIN_L1 -to sd_dq[10]
+set_location_assignment PIN_N1 -to sd_dq[9]
+set_location_assignment PIN_N2 -to sd_dq[8]
+set_location_assignment PIN_N5 -to sd_dq[7]
+set_location_assignment PIN_P3 -to sd_dq[6]
+set_location_assignment PIN_M6 -to sd_dq[5]
+set_location_assignment PIN_N3 -to sd_dq[4]
+set_location_assignment PIN_K6 -to sd_dq[3]
+set_location_assignment PIN_L4 -to sd_dq[2]
+set_location_assignment PIN_L3 -to sd_dq[1]
+set_location_assignment PIN_K5 -to sd_dq[0]
+set_location_assignment PIN_P6 -to sd_we
+set_location_assignment PIN_M8 -to sd_ras
+set_location_assignment PIN_F3 -to Key
+set_location_assignment PIN_J6 -to Res
+set_location_assignment PIN_L9 -to LED
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_D16 -to adc_clk
+set_location_assignment PIN_C15 -to b_data[0]
+set_location_assignment PIN_A15 -to b_data[1]
+set_location_assignment PIN_C14 -to b_data[2]
+set_location_assignment PIN_A14 -to b_data[3]
+set_location_assignment PIN_A13 -to b_data[4]
+set_location_assignment PIN_A12 -to b_data[5]
+set_location_assignment PIN_A11 -to b_data[6]
+set_location_assignment PIN_D11 -to b_data[7]
+set_location_assignment PIN_B10 -to b_data[8]
+set_location_assignment PIN_E10 -to b_data[9]
+set_location_assignment PIN_E9 -to b_data[10]
+set_location_assignment PIN_A9 -to b_data[11]
+set_location_assignment PIN_A8 -to b_data[12]
+set_location_assignment PIN_C9 -to b_data[13]
+set_location_assignment PIN_C8 -to b_data[14]
+set_location_assignment PIN_A7 -to b_data[15]
+set_location_assignment PIN_A6 -to b_addr[0]
+set_location_assignment PIN_B5 -to b_addr[1]
+set_location_assignment PIN_D6 -to b_addr[2]
+set_location_assignment PIN_D4 -to b_addr[3]
+set_location_assignment PIN_A2 -to b_addr[4]
+set_location_assignment PIN_C3 -to b_csel
+set_location_assignment PIN_G2 -to b_fclk
+set_location_assignment PIN_F5 -to b_fdskr
+set_location_assignment PIN_A3 -to b_rd
+set_location_assignment PIN_A4 -to b_wr
+set_location_assignment PIN_F10 -to ad_data[0]
+set_location_assignment PIN_G11 -to ad_data[1]
+set_location_assignment PIN_K11 -to ad_data[2]
+set_location_assignment PIN_J14 -to ad_data[3]
+set_location_assignment PIN_K12 -to ad_data[4]
+set_location_assignment PIN_K16 -to ad_data[5]
+set_location_assignment PIN_L13 -to ad_data[6]
+set_location_assignment PIN_P15 -to ad_data[7]
+set_location_assignment PIN_L16 -to ad_data[8]
+set_location_assignment PIN_N16 -to ad_data[9]
+set_global_assignment -name VERILOG_FILE rd_fifo.v
+set_global_assignment -name VERILOG_FILE adr_selector.v
+set_global_assignment -name VERILOG_FILE main.v
+set_global_assignment -name VERILOG_FILE delay.v
+set_global_assignment -name BDF_FILE burst.bdf
+set_global_assignment -name SIGNALTAP_FILE output_files/stp2.stp
+set_global_assignment -name VERILOG_FILE test.v
+set_global_assignment -name SIGNALTAP_FILE stp2.stp
+set_global_assignment -name VERILOG_FILE pip.v
+set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE PERFORMANCE"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,2 @@
+Warning (10273): Verilog HDL warning at rd_fifo.v(40): extended using "x" or "z" File: /storage/projects/2020/fpga_adc/project_verilog/rd_fifo.v Line: 40
+Warning (10273): Verilog HDL warning at sdram.v(650): extended using "x" or "z" File: /storage/projects/2020/fpga_adc/project_verilog/sdram.v Line: 650

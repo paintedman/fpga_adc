@@ -1,0 +1,185 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -13.059
+TNS   : -1138.387
+
+Type  : Slow 1200mV 85C Model Setup 'sdram:inst11|state_q.STATE_TERMINATE'
+Slack : -9.541
+TNS   : -24.374
+
+Type  : Slow 1200mV 85C Model Setup 'b_addr[0]'
+Slack : -7.249
+TNS   : -69.986
+
+Type  : Slow 1200mV 85C Model Hold 'sdram:inst11|state_q.STATE_TERMINATE'
+Slack : -0.048
+TNS   : -0.048
+
+Type  : Slow 1200mV 85C Model Hold 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'b_addr[0]'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.779
+TNS   : -48.042
+
+Type  : Slow 1200mV 85C Model Recovery 'b_addr[0]'
+Slack : -2.684
+TNS   : -81.234
+
+Type  : Slow 1200mV 85C Model Removal 'b_addr[0]'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.067
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'b_addr[0]'
+Slack : -3.481
+TNS   : -86.834
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sdram:inst11|state_q.STATE_TERMINATE'
+Slack : -3.481
+TNS   : -6.962
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst3|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.519
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.639
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 9.858
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -12.062
+TNS   : -1027.803
+
+Type  : Slow 1200mV 0C Model Setup 'sdram:inst11|state_q.STATE_TERMINATE'
+Slack : -8.854
+TNS   : -23.651
+
+Type  : Slow 1200mV 0C Model Setup 'b_addr[0]'
+Slack : -6.788
+TNS   : -65.928
+
+Type  : Slow 1200mV 0C Model Hold 'sdram:inst11|state_q.STATE_TERMINATE'
+Slack : -0.064
+TNS   : -0.064
+
+Type  : Slow 1200mV 0C Model Hold 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.269
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'b_addr[0]'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.255
+TNS   : -42.274
+
+Type  : Slow 1200mV 0C Model Recovery 'b_addr[0]'
+Slack : -2.716
+TNS   : -80.018
+
+Type  : Slow 1200mV 0C Model Removal 'b_addr[0]'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.732
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'b_addr[0]'
+Slack : -3.481
+TNS   : -86.705
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sdram:inst11|state_q.STATE_TERMINATE'
+Slack : -3.481
+TNS   : -6.962
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst3|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.519
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.622
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.855
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -6.268
+TNS   : -562.885
+
+Type  : Fast 1200mV 0C Model Setup 'sdram:inst11|state_q.STATE_TERMINATE'
+Slack : -4.499
+TNS   : -9.385
+
+Type  : Fast 1200mV 0C Model Setup 'b_addr[0]'
+Slack : -3.074
+TNS   : -27.608
+
+Type  : Fast 1200mV 0C Model Hold 'sdram:inst11|state_q.STATE_TERMINATE'
+Slack : -0.352
+TNS   : -0.352
+
+Type  : Fast 1200mV 0C Model Hold 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.099
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'b_addr[0]'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.563
+TNS   : -26.292
+
+Type  : Fast 1200mV 0C Model Recovery 'b_addr[0]'
+Slack : -1.178
+TNS   : -12.543
+
+Type  : Fast 1200mV 0C Model Removal 'b_addr[0]'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.358
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'b_addr[0]'
+Slack : -3.000
+TNS   : -89.547
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sdram:inst11|state_q.STATE_TERMINATE'
+Slack : -3.000
+TNS   : -6.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst3|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 1.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst3|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.708
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.423
+TNS   : 0.000
+
+------------------------------------------------------------

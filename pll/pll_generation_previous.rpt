@@ -1,0 +1,33 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\Code\Wavelets\burst_sdram\pll.qsys --block-symbol-file --output-directory=D:\Code\Wavelets\burst_sdram\pll --family="Cyclone 10 LP" --part=10CL006YU256C8G
+Progress: Loading burst_sdram/pll.qsys
+Progress: Reading input file
+Progress: Adding altclkctrl_0 [altclkctrl 18.1]
+Progress: Parameterizing module altclkctrl_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+: pll.altclkctrl_0: Targeting device family: Cyclone 10 LP.
+: pll.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Code\Wavelets\burst_sdram\pll.qsys --synthesis=VERILOG --output-directory=D:\Code\Wavelets\burst_sdram\pll\synthesis --family="Cyclone 10 LP" --part=10CL006YU256C8G
+Progress: Loading burst_sdram/pll.qsys
+Progress: Reading input file
+Progress: Adding altclkctrl_0 [altclkctrl 18.1]
+Progress: Parameterizing module altclkctrl_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+: pll.altclkctrl_0: Targeting device family: Cyclone 10 LP.
+: pll.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Info: pll: Generating pll "pll" for QUARTUS_SYNTH
+Info: altclkctrl_0: Generating top-level entity pll_altclkctrl_0.
+Info: altclkctrl_0: "pll" instantiated altclkctrl "altclkctrl_0"
+Info: pll: Done "pll" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
