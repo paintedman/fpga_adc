@@ -15,7 +15,10 @@ reg [(ADDR_WIDTH-1):0] read_addr;
 reg [(ADDR_WIDTH-1):0] write_addr;
 reg [DATA_WIDTH-1:0] ram[2**ADDR_WIDTH-1:0];
 
-assign full = ( ( write_addr + 1 ) == read_addr );
+wire [(ADDR_WIDTH-1):0] next_write_addr;
+
+assign next_write_addr = ( write_addr + 1 );
+assign full = ( next_write_addr == read_addr );
 assign empty = ( write_addr == read_addr );
 
 always @( posedge clk ) begin
@@ -23,7 +26,7 @@ always @( posedge clk ) begin
 		 read_addr <= 0;
 		 write_addr <= 0;
 	end else begin
-		if ( wr ) begin
+		if ( wr && !full ) begin
 			ram[write_addr] <= data;
 			write_addr <= write_addr + 1'b1;
 		end

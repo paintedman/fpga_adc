@@ -4,15 +4,16 @@ module adc_sdram_master #( parameter ADC_DATA_COUNT = 128 )
 	(
 		input	clk,
 		input reset_n,
+      input start,
+      input [15:0] data_in,
 		
-		input start,
 		output fifo_init,
 		output fifo_write,
 		output fifo_read,
 		output sdram_op_rw,
 		output [1:0] sdram_byte_sel,
 		output [31:0] sdram_addr,
-		output [15:0] sdram_data
+		output [15:0] sdram_data_out
 	);
 	
 	localparam STATE_IDLE = 0;
@@ -50,23 +51,58 @@ module adc_sdram_master #( parameter ADC_DATA_COUNT = 128 )
 		start_prev_r <= start;
 	end
 	
+   always @ ( posedge clk ) begin
+      if ( reset_n == 0 ) begin
+         sdram_addr_r <= 0;
+			sdram_data_r <= 0;
+			sdram_op_rw_r <= 0;
+      end
+      
+      case ( state ) 
+			STATE_IDLE: begin
+				sdram_addr_r <= 0;
+				sdram_data_r <= 0;
+				sdram_op_rw_r <= 0;
+			end
+			
+			STATE_WRITE: begin
+				
+				sdram_data_r <= data_in;
+				sdram_op_rw_r <= 1;
+            
+            if ( adc_data_count_r == 0 ) begin
+					sdram_addr_r <= 0;
+				end else begin
+					sdram_addr_r <= sdram_addr_r + 1;
+				end
+			end
+			
+			STATE_READ: begin
+				sdram_data_r <= 0;
+				sdram_op_rw_r <= 0;
+            
+            if ( adc_data_count_r == 0 ) begin
+					sdram_addr_r <= 0;
+				end else begin
+					sdram_addr_r <= sdram_addr_r + 1;
+				end
+			end
+		
+		endcase
+         
+   end
+   
 	always @ ( posedge clk ) begin
 		if ( reset_n == 0 ) begin
 			fifo_init_r <= 0;
 			fifo_write_r <= 0;
 			fifo_read_r <= 0;
-			sdram_addr_r <= 0;
-			sdram_data_r <= 0;
-			sdram_op_rw_r <= 0;
 		end 
 		
 		case ( state ) 
 			STATE_IDLE: begin
 				fifo_write_r <= 0;
 				fifo_read_r <= 0;
-				sdram_addr_r <= 0;
-				sdram_data_r <= 0;
-				sdram_op_rw_r <= 0;
 				adc_data_count_r <= ADC_DATA_COUNT;
 				
 				if ( start_request_r == 0 ) begin
@@ -105,6 +141,7 @@ module adc_sdram_master #( parameter ADC_DATA_COUNT = 128 )
 			end
 		
 		endcase
+      
 	end
 	
 endmodule

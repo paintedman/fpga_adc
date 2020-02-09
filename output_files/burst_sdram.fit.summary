@@ -1,16 +1,16 @@
-Fitter Status : Successful - Mon Jan 27 18:01:12 2020
+Fitter Status : Successful - Sun Feb  9 17:49:13 2020
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : burst_sdram
 Top-level Entity Name : burst
 Family : Cyclone 10 LP
 Device : 10CL006YU256C8G
 Timing Models : Final
-Total logic elements : 1,659 / 6,272 ( 26 % )
-    Total combinational functions : 817 / 6,272 ( 13 % )
-    Dedicated logic registers : 1,385 / 6,272 ( 22 % )
-Total registers : 1385
-Total pins : 142 / 177 ( 80 % )
+Total logic elements : 1,821 / 6,272 ( 29 % )
+    Total combinational functions : 956 / 6,272 ( 15 % )
+    Dedicated logic registers : 1,496 / 6,272 ( 24 % )
+Total registers : 1496
+Total pins : 126 / 177 ( 71 % )
 Total virtual pins : 0
-Total memory bits : 70,912 / 276,480 ( 26 % )
+Total memory bits : 72,704 / 276,480 ( 26 % )
 Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
 Total PLLs : 1 / 2 ( 50 % )
