@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="a357a898c63ffeb1862b"/>
+    <hash md5_digest_80b="2359c33604e95f466dee"/>
   </project>
   <file_info>
     <file device="10CL006YU256C8G" path="burst_sdram.sof" usercode="0xFFFFFFFF"/>
@@ -15,8 +15,8 @@
         <parameter name="SLD_IP_VERSION" type="dec" value="6"/>
         <parameter name="SLD_IP_MINOR_VERSION" type="dec" value="0"/>
         <parameter name="SLD_COMMON_IP_VERSION" type="dec" value="0"/>
-        <parameter name="sld_data_bits" type="unknown" value="138"/>
-        <parameter name="sld_trigger_bits" type="unknown" value="4"/>
+        <parameter name="sld_data_bits" type="unknown" value="1"/>
+        <parameter name="sld_trigger_bits" type="unknown" value="1"/>
         <parameter name="SLD_NODE_CRC_BITS" type="dec" value="32"/>
         <parameter name="SLD_NODE_CRC_HIWORD" type="dec" value="41394"/>
         <parameter name="SLD_NODE_CRC_LOWORD" type="dec" value="50132"/>
@@ -34,7 +34,7 @@
         <parameter name="SLD_HPS_TRIGGER_OUT_ENABLED" type="dec" value="0"/>
         <parameter name="SLD_HPS_EVENT_ENABLED" type="dec" value="0"/>
         <parameter name="SLD_HPS_EVENT_ID" type="dec" value="0"/>
-        <parameter name="sld_advanced_trigger_entity" type="unknown" value="sld_reserved_wishbone_auto_signaltap_0_1_1450,"/>
+        <parameter name="sld_advanced_trigger_entity" type="unknown" value="sld_reserved_wishbone_auto_signaltap_0_1_c519,"/>
         <parameter name="sld_trigger_level_pipeline" type="unknown" value="1"/>
         <parameter name="sld_trigger_pipeline" type="unknown" value="0"/>
         <parameter name="sld_ram_pipeline" type="unknown" value="0"/>
@@ -57,7 +57,7 @@
         <parameter name="sld_state_flow_use_generated" type="unknown" value="0"/>
         <parameter name="sld_current_resource_width" type="unknown" value="1"/>
         <parameter name="sld_attribute_mem_mode" type="unknown" value="OFF"/>
-        <parameter name="sld_storage_qualifier_bits" type="unknown" value="138"/>
+        <parameter name="sld_storage_qualifier_bits" type="unknown" value="39"/>
         <parameter name="SLD_STORAGE_QUALIFIER_GAP_RECORD" type="dec" value="0"/>
         <parameter name="SLD_STORAGE_QUALIFIER_MODE" type="string" value="OFF"/>
         <parameter name="SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION" type="dec" value="0"/>
@@ -72,6 +72,12 @@
     </node>
   </node_info>
   <sld_infos>
+    <sld_info hpath="sdram:inst5" name="inst5">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME sdram HAS_SOPCINFO 1 GENERATION_ID 1581436078"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
     <sld_info hpath="sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:instrumentation_fabric" library="alt_sld_fab" name="instrumentation_fabric">
       <assignment_values>
         <assignment_value text="QSYS_NAME alt_sld_fab HAS_SOPCINFO 1"/>

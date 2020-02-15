@@ -1,0 +1,93 @@
+// 27.01.2020 Dmitriev Dmitry
+
+module adc_sdram_master #( parameter ADC_DATA_COUNT = 128 )
+                         (input	clk,
+                          input reset_n,
+                          input start,
+                          input buffer_empty,
+                          input buffer_full,
+                          input [15:0] data_in,
+                          output reg buffer_init,
+                          output reg buffer_write,
+                          output reg buffer_read,
+                          output reg [23:0] sdram_addr,
+                          output [1:0] sdram_byteenable_n,
+                          output sdram_chipselect,
+                          output reg [15:0] sdram_writedata,
+                          output reg sdram_read_n,
+                          output reg sdram_write_n,
+                          input [15:0] sdram_readdata,
+                          input sdram_readdatavalid,
+                          input sdram_waitrequest);
+   
+   /* States */
+   localparam STATE_IDLE  = 0;
+   localparam STATE_WRITE = 1;
+   localparam STATE_READ  = 2;
+   
+   /* Registers */
+   reg [2:0] state = STATE_IDLE;
+   reg [22:0] data_transferred;
+   
+   /* Assignments */
+   assign sdram_byteenable_n = 2'b11;
+   assign sdram_chipselect   = 1;
+   
+   /* Code */
+   always @ ( posedge clk ) begin
+      case ( state )
+         STATE_IDLE: begin
+            buffer_write <= 0;
+            buffer_read  <= 0;
+            
+            sdram_addr      <= 0;
+            sdram_writedata <= 0;
+            sdram_read_n    <= 1;
+            sdram_write_n   <= 1;
+            
+            if ( start == 0 ) begin
+               buffer_init <= 1;
+               state       <= STATE_WRITE;
+               end else begin
+                  buffer_init <= 0;
+                  state       <= STATE_IDLE;
+               end
+            end
+         end
+         
+         STATE_WRITE: begin
+            if ( !buffer_full )
+               buffer_write <= 1;
+            else
+               buffer_write <= 0;
+            
+            if ( !buffer_empty && !sdram_waitrequest ) begin
+               buffer_read      <= 1;
+               sdram_writedata  <= data_in;
+               sdram_addr       <= sdram_addr + 1;
+               data_transferred <= data_transferred + 1;
+            end
+            else begin
+               buffer_read <= 0;
+            end
+            
+            if ( data_transferred > ADC_DATA_COUNT ) begin
+               state            <= STATE_READ;
+               data_transferred <= 0;
+               sdram_addr       <= 0;
+               sdram_writedata  <= 0;
+               buffer_read      <= 0;
+               buffer_write     <= 0;
+               end else begin
+                  state <= STATE_WRITE;
+               end
+            end
+            
+            STATE_READ: begin
+               state <= STATE_IDLE;
+            end
+            
+      endcase
+   end
+   
+endmodule

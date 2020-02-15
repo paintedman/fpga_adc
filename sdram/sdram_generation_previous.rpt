@@ -1,0 +1,41 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /storage/projects/2020/fpga_adc/project_verilog/sdram.qsys --block-symbol-file --output-directory=/storage/projects/2020/fpga_adc/project_verilog/sdram --family="Cyclone 10 LP" --part=10CL006YU256C8G
+Progress: Loading project_verilog/sdram.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 19.1]
+Progress: Parameterizing module clk_0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 19.1]
+Progress: Parameterizing module sdram
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: sdram.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /storage/projects/2020/fpga_adc/project_verilog/sdram.qsys --synthesis=VERILOG --output-directory=/storage/projects/2020/fpga_adc/project_verilog/sdram/synthesis --family="Cyclone 10 LP" --part=10CL006YU256C8G
+Progress: Loading project_verilog/sdram.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 19.1]
+Progress: Parameterizing module clk_0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 19.1]
+Progress: Parameterizing module sdram
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: sdram.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: sdram: Generating sdram "sdram" for QUARTUS_SYNTH
+Info: sdram: Starting RTL generation for module 'sdram_sdram'
+Info: sdram:   Generation command is [exec /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/linux64/perl/bin/perl -I /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/sopc_builder/bin/europa -I /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/sopc_builder/bin -I /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_sdram --dir=/tmp/alt8303_6251558143337191926.dir/0002_sdram_gen/ --quartus_dir=/home/paintedman/Programs/intelFPGA_lite/19.1/quartus --verilog --config=/tmp/alt8303_6251558143337191926.dir/0002_sdram_gen//sdram_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram: Can't locate Getopt/Long.pm in @INC (you may need to install the Getopt::Long module) (@INC contains: /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/sopc_builder/bin/europa /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/sopc_builder/bin /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller /tools/perl/5.28.1/linux64/lib/site_perl/5.28.1/x86_64-linux /tools/perl/5.28.1/linux64/lib/site_perl/5.28.1 /tools/perl/5.28.1/linux64/lib/5.28.1/x86_64-linux /tools/perl/5.28.1/linux64/lib/5.28.1) at /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl line 18.
+Info: sdram: BEGIN failed--compilation aborted at /home/paintedman/Programs/intelFPGA_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl line 18.
+Info: sdram: Done RTL generation for module 'sdram_sdram'
+Error: sdram: Failed to find module sdram_sdram
+Info: sdram: "sdram" instantiated altera_avalon_new_sdram_controller "sdram"
+Error: Generation stopped, 1 or more modules remaining
+Info: sdram: Done "sdram" with 3 modules, 1 files
+Error: qsys-generate failed with exit code 1: 2 Errors, 0 Warnings
+Info: Finished: Create HDL design files for synthesis
